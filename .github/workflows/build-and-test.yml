@@ -1,0 +1,26 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-lint:
+    name: Build, Lint, and Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Setup Rust
+      uses: ATiltedTree/setup-rust@v1
+      with:
+        rust-version: stable
+        components: clippy
+    - name: Build / Lint
+      run: cargo clippy -- -W clippy::pedantic
+    - name: Test
+      run: cargo test
