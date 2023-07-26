@@ -1,4 +1,5 @@
-mod structs;
+pub mod endpoints;
+pub mod structs;
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
