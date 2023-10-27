@@ -1,6 +1,6 @@
 /// Contains configuration information for the TensorDock client. The
 /// authorization keys and tokens can be retrieved from
-/// `https://marketplace.tensordock.com/api`.
+/// <https://marketplace.tensordock.com/api>.
 #[derive(Debug, PartialEq, Eq)]
 pub struct Config {
     /// The authorization key uuid.
