@@ -1,4 +1,5 @@
-use std::{error::Error, fmt::{self, Display}};
+use std::fmt::Display;
+use std::fmt;
 
 /// An `Error` type for reporting errors related to TensorDock API interactions.
 #[derive(Debug)]
