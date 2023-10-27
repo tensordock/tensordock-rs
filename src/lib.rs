@@ -9,14 +9,19 @@ mod util;
 
 /// Client for the TensorDock Marketplace API, found here:
 /// <https://documenter.getpostman.com/view/20973002/2s8YzMYRDc>
+///
+/// This struct exposes methods for interacting directly with the TensorDock
+/// Marketplace API, requiring a configuration to be constructed containing a
+/// valid authorization key and token. Authorization keys and tokens can be
+/// generated from <https://marketplace.tensordock.com/api>.
 pub struct TensorDock {
     pub config: config::Config,
     client: Client,
 }
 
 impl TensorDock {
-    /// Create a new `TensorDock` client with the given authorization
-    /// key and authorization token.
+    /// Create a new `TensorDock` client with the given configuration that
+    /// contains a valid authorization key and token.
     pub fn new(config: config::Config) -> Self {
         Self {
             config,
@@ -24,10 +29,11 @@ impl TensorDock {
         }
     }
 
-    /// Test the authorization key and token to determine that the
-    /// authorization is registered and valid. The endpoint returns
-    /// `true` if the authorization is registered and valid.
-    /// Endpoint: <https://marketplace.tensordock.com/api/v0/auth/test>
+    /// Test the authorization key and token to determine that the authorization
+    /// is registered and valid. A POST request is made to the endpoint with the
+    /// authorization key and token. The endpoint then returns `true` if the
+    /// authorizations are registered and valid. Endpoint:
+    /// <https://marketplace.tensordock.com/api/v0/auth/test>
     pub async fn test(self) -> Result<bool, Box<dyn std::error::Error>> {
         let url = "https://marketplace.tensordock.com/api/v0/auth/test".parse::<reqwest::Url>()?;
 
