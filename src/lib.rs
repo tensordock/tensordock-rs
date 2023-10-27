@@ -8,7 +8,7 @@ pub mod error;
 mod util;
 
 /// Client for the TensorDock Marketplace API, found here:
-/// https://documenter.getpostman.com/view/20973002/2s8YzMYRDc
+/// <https://documenter.getpostman.com/view/20973002/2s8YzMYRDc>
 pub struct TensorDock {
     pub config: config::Config,
     client: Client,
@@ -27,7 +27,7 @@ impl TensorDock {
     /// Test the authorization key and token to determine that the
     /// authorization is registered and valid. The endpoint returns
     /// `true` if the authorization is registered and valid.
-    /// Endpoint: https://marketplace.tensordock.com/api/v0/auth/test
+    /// Endpoint: <https://marketplace.tensordock.com/api/v0/auth/test>
     pub async fn test(self) -> Result<bool, Box<dyn std::error::Error>> {
         let url = "https://marketplace.tensordock.com/api/v0/auth/test".parse::<reqwest::Url>()?;
 
