@@ -74,6 +74,6 @@ fn config_builder_test() {
         .key(String::from("abcd"))
         .token(String::from("efgh"))
         .build();
-    
+
     assert_eq!(expected, result);
 }

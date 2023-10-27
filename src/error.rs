@@ -1,5 +1,5 @@
-use std::fmt::Display;
 use std::fmt;
+use std::fmt::Display;
 
 /// An `Error` type for reporting errors related to TensorDock API interactions.
 #[derive(Debug)]
