@@ -41,15 +41,11 @@ impl TensorDock {
 
         let json = response.json::<serde_json::Value>().await?;
 
-        match json.as_object() {
-            Some(obj) => {
-                let is_valid_auth = obj
-                    .get("success")
-                    .map(|v| v.as_bool().unwrap_or(false))
-                    .unwrap_or(false);
-                Ok(is_valid_auth)
-            }
-            _ => Ok(false),
-        }
+        let response_val = json.as_object()
+            .and_then(|obj| obj.get("success"))
+            .and_then(|v| v.as_bool())
+            .unwrap_or(false);
+
+        Ok(response_val)
     }
 }
