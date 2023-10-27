@@ -25,7 +25,9 @@ impl TensorDock {
     }
 
     /// Test the authorization key and token to determine that the
-    /// authorization is registered and valid.
+    /// authorization is registered and valid. The endpoint returns
+    /// `true` if the authorization is registered and valid.
+    /// Endpoint: https://marketplace.tensordock.com/api/v0/auth/test
     pub async fn test(self) -> Result<bool, Box<dyn std::error::Error>> {
         let url = "https://marketplace.tensordock.com/api/v0/auth/test".parse::<reqwest::Url>()?;
 
