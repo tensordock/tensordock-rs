@@ -1,6 +1,10 @@
 [package]
 name = "tensordock-rs"
 description = "Wrapper for the TensorDock Marketplace API"
+repository = "https://github.com/tensordock/tensordock-rs"
+homepage = "https://github.com/tensordock/tensordock-rs"
+license = "MIT"
+readme = "README.md"
 version = "0.1.0"
 edition = "2021"
 
