@@ -15,6 +15,8 @@ mod util;
 /// valid authorization key and token. Authorization keys and tokens can be
 /// generated from <https://marketplace.tensordock.com/api>.
 pub struct TensorDock {
+    /// The configuration for the TensorDock client, containing the
+    /// authorization key and token.
     pub config: config::Config,
     client: Client,
 }
