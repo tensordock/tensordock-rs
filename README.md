@@ -6,6 +6,8 @@ API Endpoint Documentation:
 https://documenter.getpostman.com/view/20973002/2s8YzMYRDc
 
 API Wrapper Documentation:
-https://docs.rs/tensordock-rs/0.1.0/tensordock_rs/
+https://docs.rs/tensordock-rs/latest/tensordock_rs/
+
+API Keys: https://marketplace.tensordock.com/api
 
 Crates.io page: https://crates.io/crates/tensordock-rs

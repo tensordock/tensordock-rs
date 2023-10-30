@@ -1,3 +1,30 @@
+//! # tensordock-rs
+//!
+//! `tensordock-rs` is an API wrapper for the TensorDock Marketplace API to
+//! facilitate deployment and management of Cloud GPU servers. TensorDock makes
+//! cheap cloud GPU servers readily available to customers.
+//!
+//! ## Websites
+//!
+//! - [TensorDock] -- TensorDock's website
+//! - [API Endpoint Documentation] -- documentation about available endpoints
+//! and their expected request and response objects.
+//! - [API Wrapper Documentation] -- documentation about this API wrapper.
+//! - [API Keys] -- where to obtain authorization keys and tokens for the
+//! TensorDock Marketplace.
+//!
+//! [TensorDock]: https://tensordock.com
+//! [API Endpoint Documentation]: https://documenter.getpostman.com/view/20973002/2s8YzMYRDc
+//! [API Wrapper Documentation]: https://docs.rs/tensordock-rs/latest/tensordock_rs/
+//! [API Keys]: https://marketplace.tensordock.com/api
+//!
+//! ## Supported endpoints
+//!
+//! The currently supported endpoints by this API Wrapper are listed below.
+//! Other endpoints are in-progress.
+//!
+//! - /api/v0/auth/test
+
 use std::collections::HashMap;
 
 use reqwest::Client;
